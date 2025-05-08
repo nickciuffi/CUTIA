@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -33,8 +34,8 @@ public class AmbienteController {
                     .builder()
                     .temperatura(Float.parseFloat(apiBody.getTemperatura()))
                     .umidade(Float.parseFloat(apiBody.getUmidade()))
-                    .dia(LocalDate.now())
-                    .hora(LocalTime.now())
+                    .dia(LocalDate.now(ZoneId.of("America/Sao_Paulo")))
+                    .hora(LocalTime.now(ZoneId.of("America/Sao_Paulo")))
                     .build();
 
             service.adicionarAmbiente(ambiente);
