@@ -11,5 +11,7 @@ import java.time.LocalTime;
 public class AmbienteResponseDTO {
     private float temperatura;
     private float umidade;
+    private boolean coolerLigado;
+    private boolean umidificadorLigado;
     private LocalTime hora;
 }

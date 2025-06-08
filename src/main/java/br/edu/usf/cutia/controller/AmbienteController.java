@@ -34,6 +34,8 @@ public class AmbienteController {
                     .builder()
                     .temperatura(Float.parseFloat(apiBody.getTemperatura()))
                     .umidade(Float.parseFloat(apiBody.getUmidade()))
+                    .coolerLigado(apiBody.isCoolerLigado())
+                    .umidificadorLigado(apiBody.isUmidificadorLigado())
                     .dia(LocalDate.now(ZoneId.of("America/Sao_Paulo")))
                     .hora(LocalTime.now(ZoneId.of("America/Sao_Paulo")))
                     .build();

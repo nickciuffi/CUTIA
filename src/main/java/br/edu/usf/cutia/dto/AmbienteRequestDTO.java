@@ -6,4 +6,6 @@ import lombok.Data;
 public class AmbienteRequestDTO {
     private String temperatura;
     private String umidade;
+    private boolean coolerLigado;
+    private boolean umidificadorLigado;
 }

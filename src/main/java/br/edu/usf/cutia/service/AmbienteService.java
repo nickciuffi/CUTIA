@@ -30,6 +30,8 @@ public class AmbienteService {
                     .builder()
                     .temperatura(ambiente.getTemperatura())
                     .umidade(ambiente.getUmidade())
+                            .coolerLigado(ambiente.isCoolerLigado())
+                            .umidificadorLigado(ambiente.isUmidificadorLigado())
                     .hora(ambiente.getHora().truncatedTo(java.time.temporal.ChronoUnit.SECONDS))
                     .build());
         }

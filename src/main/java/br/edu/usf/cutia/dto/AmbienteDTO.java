@@ -15,6 +15,8 @@ public class AmbienteDTO {
     private String id;
     private float temperatura;
     private float umidade;
+    private boolean coolerLigado;
+    private boolean umidificadorLigado;
     private LocalTime hora;
     private LocalDate dia;
 }
